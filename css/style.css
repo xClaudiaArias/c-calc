@@ -1,21 +1,58 @@
+body {
+    background-color: #e7d2d6;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto Slab", serif;
+}
+
 .container {
     width: 300px;
     height: 500px;
-    background-color: red;
+    /* background-color: rgb(14, 0, 29); */
+    background-color: #6D6875;
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(126, 126, 126, 0.2);
 }
 
 .top-display {
     width: inherit;
-    height: 60px;
+    height: 70px;
+    padding: auto;
+    /* color: rgb(105, 58, 155); */
+    color: #a48b8f;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    font-size: 24px;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(154, 137, 137, 0.2);
 }
 
 .display {
     width: inherit;
-    height: 200px;
+    height: 125px;
+    /* border: 1px solid yellow; */
+    padding: auto;
+    /* color: rgb(201, 150, 255); */
+    color: #ffeff0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    font-size: 80px;
+    font-weight: 700;
 }
 
 .buttons {
+    padding: auto;
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "cloud clear clear multiply"
                         "seven eight nine divide"
                         "four five six subtract"
@@ -23,7 +60,69 @@
                         "zero period equal equal"
     
     ;
+    height: auto;
 }
+
+.buttons button {
+    height: 60px;
+    font-size: 18px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-family: "Roboto Slab", serif;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.period,
+.zero {
+    background-color: #6D6875;
+    color: #dcb7be;
+    border: 1px solid #ba9ea3;
+}
+
+.one:hover,
+.two:hover,
+.three:hover,
+.four:hover,
+.five:hover,
+.six:hover,
+.seven:hover,
+.eight:hover,
+.nine:hover,
+.period:hover,
+.zero:hover {
+    background-color: #5b5662;
+    color: #cba9af;
+    border: 1px solid #ba9ea3;
+    cursor: pointer;
+}
+
+.multiply,
+.divide,
+.add,
+.subtract {
+    background-color: #5b5762;
+    color: #c3a1a8;
+    border: 1px solid #ba9ea3;
+}
+
+.multiply:hover,
+.divide:hover,
+.add:hover,
+.subtract:hover {
+    background-color: #4e4b54;
+    color: #b4959b;
+    border: 1px solid #937d80;
+    cursor: pointer;
+}
+
 
 .one {
     grid-area: one;
@@ -75,4 +174,27 @@
 }
 .equal {
     grid-area: equal;
+}
+.equal,
+.clear {
+    background-color: #ba9ea3;
+    color: #5b5662;
+    border: 1px solid #e0bfc5;
+}
+
+.equal:hover,
+.clear:hover {
+    background-color: #a38a8f;
+    color: #4d4953;
+    cursor: pointer;
+}
+.cloud {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cloud img {
+    width: 50px;
+    height: 50px;
+    opacity: .04;
 }
